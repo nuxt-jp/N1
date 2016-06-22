@@ -15,14 +15,9 @@
 Just clone the repo and install the necessary node modules:
 
 ```shell
-$ git clone https://github.com/fireyy/react-antd-admin
-$ cd react-antd-admin
+$ git clone https://github.com/qq83387856/react-admin.git
+$ cd react-admin
 $ npm install
 $ npm start
 ```
 
-## Run test spec
-
-```shell
-$ npm run test
-```
