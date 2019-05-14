@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { createPost } from '../actions/PostsAction';
 
@@ -51,10 +50,4 @@ class PostForm extends Component {
         )
     }
 }
-
-PostForm.propTypes = {
-    fetchPosts: PropTypes.func.isRequired,
-    posts: PropTypes.array.isRequired
-};
-
 export default connect(null, { createPost })(PostForm);

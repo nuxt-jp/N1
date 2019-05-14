@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { Avatar, Card, Icon } from 'antd'
 import { fetchPosts } from '../actions/PostsAction';
@@ -12,7 +11,7 @@ class Posts extends Component {
         this.props.fetchPosts();
     }
 
-    componentWillReceiveProps(nextProps) {
+    componentWillReceiveProps(nextProps, nextStates) {
         if (nextProps.newPost) {
             this.props.posts.unshift(nextProps.newPost);
         }
@@ -49,10 +48,6 @@ class Posts extends Component {
     }
 }
 
-Posts.propTypes = {
-    fetchPosts: PropTypes.func.isRequired,
-    posts: PropTypes.array.isRequired
-};
 
 const mapStateToProps = state => ({
     posts: state.posts.items,
