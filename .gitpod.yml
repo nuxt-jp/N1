@@ -1,8 +1,0 @@
-ports:
-- port: 3000
-  onOpen: open-preview
-tasks:
-- before: >
-    export DEV_HOST=$(gp url 3000)
-  init: yarn
-  command: yarn start
